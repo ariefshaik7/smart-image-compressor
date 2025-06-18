@@ -2,7 +2,6 @@
 
 A lightweight client-side image compression tool built with HTML, CSS, and JavaScript.
 
-## 🌐 Live Demo
 Deployed on:
 - Azure Static Website
 - AWS CloudFront
