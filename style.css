@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.main-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fafafa;
+  transition: background-color 0.3s;
+}
+
+#drop-area:hover {
+  background-color: #f0f0f0;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: #6a11cb;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+}
+
+.button.secondary {
+  background-color: #333;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+input[type=range], select {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#preview img {
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.info-section {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.info-section h2 {
+  margin-top: 0;
+}
+
+.info-section ul {
+  padding-left: 1.2rem;
+}

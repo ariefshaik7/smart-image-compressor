@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Image Compressor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Image Compressor</h1>
+    <p class="subtitle">Reduce your image size with customizable quality and compression types</p>
+  </header>
+
+  <main class="main-area">
+    <div class="card">
+      <div id="drop-area">
+        <form class="my-form" onsubmit="return false;">
+          <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
+          <label class="button" for="fileElem">📁 Choose Image</label>
+        </form>
+        <p>or drag and drop here</p>
+      </div>
+
+      <div id="compression-options" class="hidden">
+        <label for="compressionType">Compression Type:</label>
+        <select id="compressionType">
+          <option value="lossy">Lossy</option>
+          <option value="lossless">Lossless</option>
+        </select>
+
+        <label for="quality">Quality: <span id="qualityValue">70</span>%</label>
+        <input type="range" id="quality" name="quality" min="10" max="100" value="70" oninput="document.getElementById('qualityValue').textContent = this.value;">
+        
+        <button onclick="compressImage()" class="button primary">🚀 Compress Image</button>
+      </div>
+
+      <div id="preview" class="hidden">
+        <h2>Preview</h2>
+        <img id="output-image" />
+        <a id="download-link" class="button secondary" download="compressed-image.jpg">⬇️ Download Compressed Image</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="info-section">
+      <h2>About Image Compression</h2>
+      <p>
+        Image compression helps reduce file size for faster load times and reduced storage without compromising visual quality.
+      </p>
+      <ul>
+        <li><strong>Lossy:</strong> Smaller size, some data removed, good for websites.</li>
+        <li><strong>Lossless:</strong> No quality loss, best for archives or editing.</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
